@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import Comments from '../components/Comments'
 
 const ViewPost = () => {
     const [post, setPost] = useState([]);
@@ -27,11 +28,14 @@ const ViewPost = () => {
     }, [id])
 
     return (
-        <div >
-            <h1>{post.title}</h1>
-            <h3>{post.author}</h3>
-            <h4>{post.date}</h4>
-            <p>{post.text}</p>
+        <div>
+            <div>
+                <h1>{post.title}</h1>
+                <h3>{post.author}</h3>
+                <h4>{post.date}</h4>
+                <p>{post.text}</p>
+            </div>
+            <Comments id={id} />
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
-const Comments = () => {
-    const [postComments, setPostComments] = useState()
+const Comments = ({ id }) => {
+    const [postComments, setPostComments] = useState([])
 
     useEffect(() => {
         const API_URL = process.env.REACT_APP_API_URL;
@@ -40,11 +40,13 @@ const Comments = () => {
         postComments.map((comment) => {
             return (
                 <div className="comment-div" key={comment._id}>
-                    <h3>{comment.text}</h3>
+                    <h4>{comment.username} said:</h4>
+                    <p>{comment.text}</p>
                     <p>{comment.date} @ {comment.time}</p>
-                    <p>Comment By {comment.username}</p>
                 </div>
             )
         })
     )
 }
+
+export default Comments
