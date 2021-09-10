@@ -1,8 +1,21 @@
+import AllPosts from "./components/AllPosts";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom"
+
 const App = () => {
   return (
-    <div>
-      Blog Client
-    </div>
+    <BrowserRouter>
+      <h1>
+        Blog Client
+      </h1>
+      <Switch>
+
+        <Route exact path="/">
+          <AllPosts />
+        </Route>
+
+
+      </Switch>
+    </BrowserRouter>
   );
 }
 
