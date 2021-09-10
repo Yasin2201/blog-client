@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import Comments from '../components/Comments'
+import Comments from '../components/Comments';
+import NewComment from "./NewComment";
 
 const ViewPost = () => {
     const [post, setPost] = useState([]);
@@ -35,6 +36,7 @@ const ViewPost = () => {
                 <h4>{post.date}</h4>
                 <p>{post.text}</p>
             </div>
+            <NewComment id={id} />
             <Comments id={id} />
         </div>
     )
