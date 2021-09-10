@@ -1,6 +1,6 @@
 import AllPosts from "./components/AllPosts";
 import ViewPost from "./components/ViewPost";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
@@ -13,7 +13,6 @@ const App = () => {
         <Route exact path="/">
           <AllPosts />
         </Route>
-
 
         <Route exact path='/posts/:id'>
           <ViewPost />
