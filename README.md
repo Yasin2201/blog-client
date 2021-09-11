@@ -2,7 +2,7 @@
 Blog Client is the front-end system for the [Blog API](https://github.com/Yasin2201/blog-api) 
 
 ## Deployed
-[Live Version](https://blog-cms-ten.vercel.app/login)
+[Live Version](https://blog-client-two.vercel.app/)
 
 ![Live View](BlogClient.gif)
 
