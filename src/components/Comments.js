@@ -39,7 +39,7 @@ const Comments = ({ id }) => {
     }, [id])
     return (
         postComments.length > 0 &&
-        <div>
+        <div className="comments-container">
             <h2>Comments:</h2>
             {postComments.map((comment) => {
                 return (
