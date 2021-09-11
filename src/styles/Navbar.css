@@ -1,0 +1,19 @@
+nav {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(32, 32, 32);
+}
+
+a, a:visited {
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: rgb(102, 102, 102);
+}
