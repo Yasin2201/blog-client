@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "../styles/Comments.css";
 
 const Comments = ({ id }) => {
     const [postComments, setPostComments] = useState([])
@@ -40,8 +41,10 @@ const Comments = ({ id }) => {
         postComments.map((comment) => {
             return (
                 <div className="comment-div" key={comment._id}>
-                    <h4>{comment.username} said:</h4>
-                    <p>{comment.text}</p>
+                    <h4>{comment.username}</h4>
+                    <div>
+                        <p>{comment.text}</p>
+                    </div>
                     <p>{comment.date} @ {comment.time}</p>
                 </div>
             )
