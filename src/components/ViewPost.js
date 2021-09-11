@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Comments from '../components/Comments';
 import NewComment from "./NewComment";
+import "../styles/ViewPost.css"
 
 const ViewPost = () => {
     const [post, setPost] = useState([]);
@@ -20,7 +21,19 @@ const ViewPost = () => {
                     },
                 })
                 const data = await response.json()
-                setPost(data.found_post = { ...data.found_post, date: new Date(data.found_post.date).toLocaleString("en-US") })
+                const formattedData = data.found_post = {
+                    ...data.found_post,
+                    date: new Date(data.found_post.date).toLocaleDateString("en-gb", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                    }),
+                    time: new Date(data.found_post.date).toLocaleTimeString("en-US", {
+                        hour: "numeric",
+                        minute: "numeric",
+                    })
+                }
+                setPost(formattedData)
             } catch (err) {
                 console.error(err)
             }
@@ -29,16 +42,19 @@ const ViewPost = () => {
     }, [id])
 
     return (
-        <div>
-            <div>
+        <div className="view-post-container">
+            <div className="view-post-div">
                 <h1>{post.title}</h1>
-                <h3>{post.author}</h3>
-                <h4>{post.date}</h4>
+                <div className="post-details">
+                    <p>Published by: {post.author} on {post.date}, {post.time}</p>
+                    <p></p>
+                </div>
                 <p>{post.text}</p>
             </div>
+            <hr />
             <NewComment id={id} />
             <Comments id={id} />
-        </div>
+        </div >
     )
 }
 
