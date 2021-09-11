@@ -1,0 +1,41 @@
+#posts-container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.posts-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    overflow: scroll;
+    box-shadow: 0px 0px 10px rgb(190, 190, 190);
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 7px;
+    margin: 3px;
+    border: 2px solid rgb(134, 124, 204);
+    background-color: transparent;
+    color: rgb(134, 124, 204);
+
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: rgb(134, 124, 204);
+    color: white;
+}
