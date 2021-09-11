@@ -1,3 +1,19 @@
+# Blog Client
+Blog Client is the front-end system for the [Blog API](https://github.com/Yasin2201/blog-api) 
+
+## Deployed
+[Live Version](https://blog-cms-ten.vercel.app/login)
+
+![Live View](BlogClient.gif)
+
+## Functionality
+* Display all blog posts
+* Allow visitors to post comments under blogs
+
+## Built With:
+* React
+* Fetch API
+* [Blog API](https://github.com/Yasin2201/blog-api)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
