@@ -38,17 +38,22 @@ const Comments = ({ id }) => {
 
     }, [id])
     return (
-        postComments.map((comment) => {
-            return (
-                <div className="comment-div" key={comment._id}>
-                    <h4>{comment.username}</h4>
-                    <div>
-                        <p>{comment.text}</p>
+        postComments.length > 0 &&
+        <div>
+            <h2>Comments:</h2>
+            {postComments.map((comment) => {
+                return (
+                    <div className="comment-div" key={comment._id}>
+                        <h4>{comment.username}</h4>
+                        <div>
+                            <p>{comment.text}</p>
+                        </div>
+                        <p>{comment.date} @ {comment.time}</p>
                     </div>
-                    <p>{comment.date} @ {comment.time}</p>
-                </div>
-            )
-        })
+                )
+            })
+            }
+        </div>
     )
 }
 
