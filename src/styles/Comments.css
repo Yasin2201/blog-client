@@ -19,6 +19,7 @@
 
 .comment-div div {
     overflow: scroll;
+    overflow-wrap: break-word;
 }
 
 .comment-div h4 {
