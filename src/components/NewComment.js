@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/NewComment.css";
 
 const NewComment = ({ id }) => {
     const [errors, setErrors] = useState([]);
@@ -35,7 +36,7 @@ const NewComment = ({ id }) => {
     }
 
     return (
-        <div>
+        <div className="new-comment-container">
             <form className="new-comment-form" onSubmit={(e) => onNewCommentSubmit(e)}>
                 <input type="text" name="username" placeholder="Username" />
                 <textarea type="text" name="text" placeholder="Share your thoughts..." />
